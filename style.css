@@ -1,0 +1,139 @@
+/*- Mobile: 375px
+- Desktop: 1440px*/
+
+*{box-sizing: border-box;}
+
+:root{
+--purple-100: hsl(254, 88%, 90%);
+--purple-500: hsl(256, 67%, 59%);
+
+--yellow-100: hsl(31, 66%, 93%);
+--yellow-500: hsl(39, 100%, 71%);
+
+--white: hsl(0, 0%, 100%);
+--black: hsl(0, 0%, 7%);
+}
+
+body{
+  font-family: "DM Sans";
+  font-size: 18px;
+  background-color: rgba(245, 245, 245, 1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+
+  @media screen and (max-width: 768px) {
+  height: auto;}
+}
+
+p{
+  font-weight: 400;
+  margin: 0;
+}
+
+h1{
+  font-weight: 500;
+  margin: 0;
+  font-size: 50px;
+}
+
+h2{
+  font-weight: 500;
+  margin: 0;
+  font-size: 35px;
+  line-height: 1em;
+}
+
+h3{
+  font-weight: 500;
+  margin: 0;
+  font-size: 25px;
+}
+
+figure{
+  width: 100px;
+  margin: 0;
+}
+
+img{
+  width: 100%;
+}
+
+.grid-container {
+  display: grid;
+  gap: 30px;
+  width: 80vw;
+  color: black;
+
+  .grid-cell {
+    border-radius: 10px;
+    min-height: 200px;
+    padding: 20px;
+    overflow: hidden;
+  }
+
+  grid-template-rows: 3fr 1fr 1fr 2fr;
+  grid-template-columns: repeat(4, 1fr);
+
+  grid-template-areas:
+    "create social social shedule"
+    "create manage maintain shedule"
+    "write manage maintain shedule"
+    "write fifsix grow grow";
+  
+  @media (max-width: 768px) {
+    grid-template-rows: 3fr 1fr 2fr 4fr 3fr 1fr 1fr 2fr;
+    grid-template-columns: 1fr;
+
+    grid-template-areas:
+      "social"
+      "manage"
+      "maintain"
+      "shedule"
+      "grow"
+      "fifsix"
+      "create"
+      "write";
+    width: 90vw;
+    height: auto;
+
+    .grid-cell {
+    border-radius: 10px;
+    min-height: 100px;
+    }
+  }
+}
+
+/* Назначение областей */
+.grid-cell.Create { 
+  grid-area: create; 
+  background: var(--yellow-100); 
+}
+
+
+.grid-cell.Social { grid-area: social; background: var(--purple-500); }
+.grid-cell.Shedule { grid-area: shedule; background: var(--purple-100); }
+.grid-cell.Manage { grid-area: manage; background: var(--white); }
+.grid-cell.Maintain { grid-area: maintain; background: var(--yellow-500); }
+.grid-cell.Write { grid-area: write; background: var(--yellow-500); }
+.grid-cell.Fifsixprecent { grid-area: fifsix; background: var(--white); }
+.grid-cell.Grow { grid-area: grow; background: var(--purple-500); }
+
+.text-white{
+  color: var(--white);
+}
+
+.text-purple{
+  color: var(--purple-500);
+}
+
+.text-yellow{
+  color: var(--yellow-500);
+}
+
+.create-picture{
+  width: 100%;
+}
