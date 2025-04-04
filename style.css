@@ -21,7 +21,6 @@ body{
   display: flex;
   justify-content: center;
   width: 100vw;
-  height: 100vh;
   margin: 0;
   margin-top: 83px;
 
@@ -32,25 +31,37 @@ body{
 p{
   font-weight: 400;
   margin: 0;
+  margin-bottom: 10px;
+  line-height: 20px;
 }
 
 h1{
   font-weight: 500;
   margin: 0;
-  font-size: 50px;
+  font-size: 63px;
+  text-align: center;
+  line-height: 60px;
+  margin-bottom: 23px;
+}
+
+h1.number{
+  text-align: left;
 }
 
 h2{
   font-weight: 500;
   margin: 0;
   font-size: 35px;
-  line-height: 1em;
+  line-height: 36px;
+  margin-bottom: 20px;
 }
 
 h3{
   font-weight: 500;
   margin: 0;
-  font-size: 25px;
+  font-size: 30px;
+  line-height: 28px;
+  margin-bottom: 15px;
 }
 
 figure{
@@ -72,8 +83,9 @@ img{
   .grid-cell {
     border-radius: 10px;
     min-height: 247px;
-    padding: 20px;
+    padding: 26px;
     overflow: hidden;
+    padding-bottom: 20px;
   }
 
   grid-template-rows: 3fr 0.55fr 1.45fr 2fr;
@@ -112,16 +124,50 @@ img{
 .grid-cell.Create { 
   grid-area: create; 
   background: var(--yellow-100); 
+  padding-left: 32px;
+  padding-right: 32px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
+.grid-cell.Social { 
+  grid-area: social; 
+  background: var(--purple-500); 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 
-.grid-cell.Social { grid-area: social; background: var(--purple-500); }
-.grid-cell.Shedule { grid-area: shedule; background: var(--purple-100); }
+.grid-cell.Shedule { 
+  grid-area: shedule; 
+  background: var(--purple-100); 
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 49px 34px 41px;
+}
+
 .grid-cell.Manage { grid-area: manage; background: var(--white); }
 .grid-cell.Maintain { grid-area: maintain; background: var(--yellow-500); }
-.grid-cell.Write { grid-area: write; background: var(--yellow-500); }
+
+.grid-cell.Write { 
+  grid-area: write; 
+  background: var(--yellow-500);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; 
+}
+
 .grid-cell.Fifsixprecent { grid-area: fifsix; background: var(--white); }
-.grid-cell.Grow { grid-area: grow; background: var(--purple-500); }
+
+.grid-cell.Grow { 
+  grid-area: grow; 
+  background: var(--purple-500); 
+  display: flex;
+  flex-direction: row;
+}
 
 .text-white{
   color: var(--white);
@@ -136,5 +182,27 @@ img{
 }
 
 .create-picture{
+  width: 100%;
+}
+
+.write-picture{
+  width: 106%;
+}
+
+.social-picture{
+  width: 39%;
+}
+
+.shedule-picture{
+  width: 187%;
+  margin-bottom: 10px;
+}
+
+.manage-picture{
+  width: 152%;
+  margin-bottom: 14px;
+}
+
+.maintain-picture{
   width: 100%;
 }
