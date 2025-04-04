@@ -19,11 +19,11 @@ body{
   font-size: 18px;
   background-color: rgba(245, 245, 245, 1);
   display: flex;
-  align-items: center;
   justify-content: center;
   width: 100vw;
   height: 100vh;
   margin: 0;
+  margin-top: 83px;
 
   @media screen and (max-width: 768px) {
   height: auto;}
@@ -65,17 +65,18 @@ img{
 .grid-container {
   display: grid;
   gap: 30px;
-  width: 80vw;
+  width: 1120px;
+  height: 881px;
   color: black;
 
   .grid-cell {
     border-radius: 10px;
-    min-height: 200px;
+    min-height: 247px;
     padding: 20px;
     overflow: hidden;
   }
 
-  grid-template-rows: 3fr 1fr 1fr 2fr;
+  grid-template-rows: 3fr 0.55fr 1.45fr 2fr;
   grid-template-columns: repeat(4, 1fr);
 
   grid-template-areas:
