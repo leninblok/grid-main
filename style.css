@@ -48,12 +48,22 @@ h1.number{
   text-align: left;
 }
 
+h1.number::before{
+  content:">";
+  font-size: 50px;
+}
+
 h2{
   font-weight: 500;
   margin: 0;
   font-size: 35px;
   line-height: 36px;
   margin-bottom: 20px;
+}
+
+h2.grow-text{
+  font-size: 40px;
+  margin-bottom: 0;
 }
 
 h3{
@@ -167,6 +177,8 @@ img{
   background: var(--purple-500); 
   display: flex;
   flex-direction: row;
+  gap: 10px;
+  align-items: center;
 }
 
 .text-white{
@@ -204,5 +216,13 @@ img{
 }
 
 .maintain-picture{
+  width: 100%;
+}
+
+.grow-picture{
+  width: 115%;
+}
+
+.fifsix-picture{
   width: 100%;
 }
